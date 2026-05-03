@@ -1,0 +1,78 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 10%;
+    --card: 0 0% 98%;
+    --card-foreground: 0 0% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+    --primary: 355 83% 57%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 10%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 355 83% 57%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 355 83% 57%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 355 83% 57%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 221 39% 11%;
+    --foreground: 0 0% 90%;
+    --card: 221 39% 15%;
+    --card-foreground: 0 0% 90%;
+    --popover: 221 39% 11%;
+    --popover-foreground: 0 0% 90%;
+    --primary: 355 83% 57%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 221 39% 17%;
+    --secondary-foreground: 0 0% 90%;
+    --muted: 221 39% 20%;
+    --muted-foreground: 0 0% 70%;
+    --accent: 355 83% 57%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 355 83% 57%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 221 39% 25%;
+    --input: 221 39% 25%;
+    --ring: 355 83% 57%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/40 backdrop-blur-lg border border-black/10 shadow-xl;
+  }
+  
+  .dark .glass {
+    @apply bg-black/30 border-white/5;
+  }
+  
+  .hover-scale {
+    @apply transition-transform duration-200 hover:scale-105;
+  }
+  
+  .hover-glow {
+    @apply transition-all duration-300 hover:shadow-lg hover:shadow-primary/25;
+  }
+}
